@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-2</title>
+    <script>
+      function ele() {
+        const names = ["Anakin", "Obi-Wan", "Luke", "Leia"];
+        let text = "<table><tbody>";
+        names.forEach(add);
+        function add(name, i) {
+          text +=
+            '<tr><td>' +
+            (i + 1) +
+            "</td>" +
+            '<td>' +
+            name +
+            "</td></tr>";
+          i += 1;
+        }
+        text += "</tbody></table>";
+
+        document.getElementById("tab").innerHTML = text;
+      }
+    </script>
+    <style>
+      .container {
+        text-align: center;
+        padding: 10px;
+      }
+      table {
+        border: 7px solid rgb(199, 23, 23);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      td {
+        border: 4px solid rgb(12, 217, 16);
+        border-collapse: separate;
+        padding: 10px;
+        font-size: 23px;
+        font-weight: bold;
+        color: rgb(18, 117, 204);
+        font-family: 'Trebuchet MS';
+      }
+    </style>
+  </head>
+  <body style="background-color: sandybrown">
+    <header>
+      <div class="container">
+        <button type="button" onclick="ele()">Display Table</button>
+      </div>
+    </header>
+    <main>
+      <div class="container" id="tab"></div>
+    </main>
+  </body>
+</html>
